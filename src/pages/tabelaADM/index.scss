@@ -1,0 +1,101 @@
+.body{
+    background-image: url('../../assets/images/login.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+
+    .faixa1{
+
+        display: flex;
+        flex-direction: row;
+        background-color: #010915;
+        height: 15vh;
+        color: #ffff;
+        justify-content: space-around;
+        align-items: center;
+
+        
+    }
+    .faixa2{
+        height: 70vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    .adm{
+        font-size: 2em;
+        color: #ffff;
+        font-family: "Grenze2";
+        text-align: center;
+        letter-spacing: 1px;
+        width: 10em;
+        height: 1.5em;
+        margin-bottom: 1rem;
+    }
+
+    
+
+
+        .bot1{
+            height: 2.5em;
+            border-radius:15px ;
+            width: 20em;
+            background-color: #010915;
+            color: #B47022;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            text-decoration: none;
+            margin-bottom: 2rem;
+
+        }
+        .bot2{
+            height: 2.5em;
+            border-radius: 15px;
+            width: 20em;
+            background-color: #010915;
+            color: #B47022;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            text-decoration: none;
+
+        }
+        .faixa3{
+            background-color: #010915;
+            height: 15vh;
+            
+        }
+
+        
+
+        .preto{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100vw;
+            height: 60vh;
+            background-color: #000000ae;
+            padding-bottom: 7.9em;
+        }
+        
+        .logo{
+            height: 7em;
+            width: 7.5em;
+            align-self: flex-start;
+            
+        }
+
+        .volt{
+            font-family: 'Grenze2';
+            font-size: 1.3em;
+            text-decoration: none;
+            color: #AEABAB;
+        }
+
+    }    

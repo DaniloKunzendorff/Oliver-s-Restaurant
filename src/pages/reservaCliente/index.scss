@@ -1,0 +1,423 @@
+.body{
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 13vh;
+    background-color: #010915;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    width: 9vw;
+    height: 17vh;
+    align-self: flex-start;
+}
+
+.voltar{
+    
+    font-family: 'Grenze2';
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #AEABAB;
+    
+}
+
+.img{
+    background-image: url('../../assets/images/Home-1.png');
+    background-size: 100%;
+}
+
+.R1{
+    height: 105vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 99vw;
+    justify-content: space-evenly;
+    background-color: #000000ae;
+}
+
+.r1{
+    height: 45vh;
+    width: 60vw;
+    background-color: #010915;
+    border: 0;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+
+.R{
+    color: #B47022;
+    font-family: 'grereg';
+    font-size: 1.5rem;
+}
+
+hr{
+    width: 50vw;
+    color: #AEABAB;
+    background-color: #AEABAB;
+    height: 0.1vh;
+}
+
+h5{
+    color: #B47022;
+    font-family: 'greexl';
+    font-size: 1.3rem;
+}
+
+.d{
+    width: 22vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input1{
+    width: 10vw;
+    border: 0;
+    border-radius: 0.3rem;
+    text-align: center;
+    color: #010915;
+    background-color: #AEABAB;
+    font-family: 'her';
+    font-size: 1rem;
+}
+
+
+
+
+.t{
+    display: flex;
+    flex-direction: row;
+    width: 15vw;
+    height: 6vh;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.button1{
+    border: 0;
+    width: 2vw;
+    height: 4vh;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #AEABAB;
+    color: #010915;
+    font-size: 1.5rem;
+}
+
+.button1:hover{
+    border: 0;
+    width: 2.1vw;
+    height: 4.1vh;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #AEABAB;
+    color: #010915;
+    font-size: 1.5rem;
+}
+
+.p1{
+    color: #B47022;
+    font-size: 1.5rem;
+    font-family: 'grereg';
+    height: 1.9rem;
+    padding-bottom: 0.8rem;    
+
+}
+
+.button{
+    width: 2vw;
+    border: 0;
+    height: 4vh;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #AEABAB;
+    color: #010915;
+    font-size: 1.5rem;
+    padding-bottom: 0.2rem;    
+}
+
+.button:hover{
+    width: 2.1vw;
+    border: 0;
+    height: 4.1vh;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #AEABAB;
+    color: #010915;
+    font-size: 1.5rem;
+    padding-bottom: 0.2rem;    
+}
+
+
+.r2{
+    height: 40vh;
+    width: 60vw;
+    background-color: #010915;
+    border: 0;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.T{
+    color: #B47022;
+    font-family: 'grereg';
+    font-size: 1.5rem;
+}
+
+.p2{
+    color: #B47022;
+    font-family: 'her';
+}
+
+.nome{
+    width: 20vw;
+}
+
+.tel{
+    width: 20vw;
+}
+
+.input2{
+    width: 100%;
+    background-color: #AEABAB;
+    color: #010915;
+    border: 0;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    font-family: 'her';
+}
+
+.j{
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.y{
+    text-decoration: none;
+    color: #AEABAB;
+    font-family: 'her';
+    align-self: flex-end;
+    margin-right: 3vw;
+}
+
+
+
+
+
+
+.roda-pe{
+    background-color: #2e2e2e;
+    height: 34rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.logos-p{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+}
+
+.logo-2{
+    width: 12rem;
+    height: 12rem;
+    margin-left: 2rem;
+}
+
+.logos-a{
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    height: 17rem;
+    justify-content: space-evenly;
+}
+
+.logos-t{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+
+.email-1{
+    color: #ffffffe5;
+    margin-left: 0.5rem;
+    
+    font-family: 'balsa';
+}
+
+.logos-w{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.numero-1{
+    color: #ffffffe5;
+    margin-left: 0.5rem;
+    
+    font-family: 'balsa';
+}
+
+.logos-i{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+.email-2{
+    color: #ffffffe5;
+    margin-left: 0.5rem;
+    font-family: 'balsa';
+}
+
+.logos-f{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.l-2{
+    width: 3vw;
+    height: 5vh;
+}
+
+.l-6{
+    width: 3vw;
+    height: 5vh;
+}
+
+.l-3{
+    width: 3vw;
+    height: 5vh;
+}
+
+.l-4{
+    width: 3vw;
+    height: 5vh;
+}
+
+.l-5{
+    width: 3vw;
+    height: 5vh;
+}
+
+
+.face{
+    color: #ffffffe5;
+    font-family: 'balsa';
+    margin-left: 0.5rem;
+   
+}
+
+.logos-e{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+
+
+.email-3{
+    color: #ffffffe5;
+    margin-left: 0.5rem;
+    font-family: 'balsa';
+}
+
+
+
+.lugar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 2rem;
+    width: 42rem;
+}
+
+
+.local{
+    color: #ffffffe5;
+    font-family: 'balsa';
+    display: flex;
+    align-items: center;
+}
+
+.lu-g{
+   display: flex;
+   flex-direction: row;
+    margin-top: 2rem;
+}
+
+
+
+.b33{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3.3rem;
+    margin-top: 10vh;
+
+}
+
+.log-21{
+    display: flex;
+    width: 38rem;
+    height: 14rem;
+    flex-direction: column;
+    background-size: 100%;
+    background-image: url('../../assets//images/Opera\ Instantâneo_2022-05-13_081642_www.google.com.png');
+}
+
+.log-21:hover{
+    display: flex;
+    width: 38.5rem;
+    height: 14.5rem;
+    flex-direction: column;
+    background-size: 100%;
+    background-image: url('../../assets/images/Opera\ Instantâneo_2022-05-13_081642_www.google.com.png');
+}
+
+.log-23{
+    width: 40rem;
+    height: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+}

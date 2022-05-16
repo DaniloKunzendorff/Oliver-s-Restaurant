@@ -1,0 +1,124 @@
+.body{
+    background-image: url('../../assets/images/login.jpg');
+    background-size: 100%;
+    height: 100vh;
+
+
+    .faixa1{
+        display: flex;
+        flex-direction: row;
+        background-color: #010915;
+        justify-content: space-around;
+        height: 5.5rem;
+        align-items: center;
+    }
+
+    .s{
+        color: #a4a4a4;
+        font-family: 'grereg';
+        text-decoration: none;
+        font-size: 1.5rem;
+
+    }
+
+
+
+    .back{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center ;
+        height: 80vh;
+        background-color: #00000095;
+    }
+
+
+    .faixa2{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        justify-content: space-between;
+        height: 10rem;
+        width: 26rem;
+    }
+
+    .faixa3{
+        display: flex;
+        flex-direction: row;
+        background-color: #010915;
+        height: 4rem;
+    }
+
+    .h1{
+        text-align: center;
+        font-family: 'greexl';
+        font-size: 2rem;
+        color: #fff;
+    }
+
+
+
+    .email{
+        color: #C6781E;
+        font-size: 1.2rem;
+        margin-left: 1.5rem;
+    }
+
+    .espaço{
+        height: 3rem;
+        border: 0;
+        border-radius: 3rem;
+        width: 26rem;
+        background-color: #a4a4a4;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        padding-left: 0.5rem;
+    }
+    .pretear{
+        background-color: #010915;
+        width: 33rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50vh;
+        justify-content: space-evenly   ;
+        border-radius: 2rem;
+        
+    }
+    .senha{
+        color: #C6781E;
+        margin-left: 1.5rem;
+        font-size: 1.2rem;
+    }
+    .espaço2{
+        height: 3rem;
+        border-radius: 3rem;
+        width: 26rem;
+        border: 0;
+        background-color: #a4a4a4;
+        font-size: 1.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .botao{
+        width: 8rem;
+        border-radius: 2rem;
+        height: 2.8rem;
+        background-color: #C6781E;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        font-size: 1.8rem;
+        font-family: 'grereg';
+    }
+
+    .b{
+        width: 8rem;
+        height: 8rem;
+        align-self: flex-start;
+    }
+
+}
