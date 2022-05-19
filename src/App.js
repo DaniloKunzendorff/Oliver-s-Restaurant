@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Link to='/' exact={true} >Home</Link>
+      <Link to='/' >Home</Link>
       <Link to='/listaReserva/' exact>Login</Link>
       <Link to='/reservaCliente/' exact>Reserve</Link>
       <Link to='/ListaReserva/' exact>Lista</Link>

@@ -17,19 +17,19 @@ export default function index() {
             <section className="faixa2">
                 <div>
                 <p className="email">Email:</p>
-                <input className="espaço" type="text" size="30px" />
+                <input className="espaço" type="text"  />
             </div>
             <div>
 
                 <p className="senha">Senha:</p>
-                <input className="espaço2" type="text" size="30px" />
+                <input className="espaço2" type="text"  />
             </div>
         </section>
                 <a href="../tabelaADM" className="botao">Entrar</a>
             
                 </div>
             </section>
-            <section class="faixa3">
+            <section className="faixa3">
             </section>
         </main>
     )

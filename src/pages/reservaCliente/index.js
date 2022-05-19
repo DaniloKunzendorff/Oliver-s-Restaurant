@@ -12,7 +12,7 @@ import loc from '../../assets/images/local.png';
 export default function index() {
 
     return (
-        <main className='body'>
+        <main className='bodyr'>
             <header>
         <a href="../" className="voltar" >Voltar</a>
         <img src={Logo} className="logo" alt='logo'/>

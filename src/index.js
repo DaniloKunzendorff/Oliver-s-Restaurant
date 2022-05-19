@@ -20,7 +20,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' exact={true} element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='/listaReserva/' element={<Lista />} />
         <Route path='/reservaCliente/' element={<Reserve />} />
         <Route path='/login/' element={<Login />} />

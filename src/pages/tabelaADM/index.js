@@ -4,7 +4,7 @@ import Logo from "../../assets/images/LOGO.png";
 export default function index() {
 
     return (
-        <main className='body'>
+        <main className='bodyt'>
             <section className="faixa1">
                 <a href="../" className="volt">Voltar</a>
                 <img className= "logo "src={Logo} alt='text' />
