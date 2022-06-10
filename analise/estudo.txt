@@ -1,0 +1,81 @@
+(1) /POST       /funcionario/login
+
+request body
+{
+    "email": "",
+    "senha": ""
+}
+
+response(200)
+{
+    "id": 0,
+    "email": "",
+}
+
+/////////////////////////////////////////////////////
+(2) /POST       /reserva/nova
+
+request body
+{
+        "cliente": "",
+        "telefone": ,
+        "data":"" ,
+        "pessoas" 0,
+        "status": ""
+}
+
+response(200)
+{
+    "cliente"
+    "telefone":,
+    "Data":"",
+    "pessoas" 0,
+    "status": ""
+}
+
+
+/////////////////////////////////////////////////////
+(3) POST        /reserva/:status
+
+request route
+
+response (200)
+[
+    {
+        "id": 0,
+        "cliente",
+        "Data":"",
+        "pessoas" 0,
+        "status": ""
+    }
+]
+
+/////////////////////////////////////////////////////
+(4) delete      /reserva/confirmar/:id
+
+response(204)
+
+
+/////////////////////////////////////////////////////
+(5) delete      /reserva/remover/:id
+
+response (204)
+-- sem conteúdo
+
+
+/////////////////////////////////////////////////////
+(6) Put       /reserva/alterar/:id
+
+request 
+{   
+    "id": 0,
+    "cliente": "",
+    "telefone": "",
+    "Data": "",
+    "pessoas": 0,
+    "status":""
+}
+
+response (204)
+-- sem conteúdo
+
