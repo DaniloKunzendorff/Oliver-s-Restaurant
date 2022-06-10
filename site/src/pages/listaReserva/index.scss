@@ -1,0 +1,191 @@
+
+
+.bodylista{
+    
+
+
+background-image: url('../../assets/images/Rectangle\ 908.jpg');
+background-size: 100vw 100vh;
+display: flex;
+flex-direction: column;
+height: 100vh;
+width: 100vw;
+
+
+
+.t{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 20rem;
+    height: 4rem;
+    margin-left: 4vw;
+}
+
+.img{
+    height:5.3rem;
+    width: 5.5rem;
+    display: flex;
+    align-self: flex-start;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    background-color: #010915;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: 'grereg';
+    font-size: 1.5rem;
+    
+}
+
+.voltar{
+    justify-self: flex-start;
+}
+
+.nova{
+    justify-self: flex-end;
+    color: #AEABAB;
+    margin-right: 6vw;
+}
+
+
+
+p{
+    color: #AEABAB;
+    font-family: 'gremed';
+    font-size:  0.7rem;
+    margin-left: 0.7rem;
+}
+
+a{
+    text-decoration: none;
+    color: #AEABAB;
+}
+
+h4{
+    color: #FFF;
+    font-size: 1.6rem;
+    font-family: 'gotreg';
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    height: 90vh;
+}
+
+.div1{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+    height: 45vh;
+}
+
+.r{
+    margin: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 17rem;
+    width: 12rem;
+    border-radius: 1rem;
+    background-color: #010915;
+}
+
+.div2{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+    height: 50vh;
+
+}
+
+
+
+.a2{
+    font-size: 2rem;
+    width: 4rem;
+    text-align: center;
+    height: 2.5rem;
+    font-family: 'gotreg';
+    font-weight: 500;
+}
+
+input{
+    text-decoration: none;
+    border-radius: 1.2rem;
+    width:9rem;
+    font-family: 'gremed';
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: #AEABAB;
+    border: 0;
+}
+
+.h{
+    border-radius: 1.2rem;
+    width:10rem;
+    font-family: 'gotreg' !important;
+    height: 1.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    font-size: 0.7rem;
+    background-color: #AEABAB;
+}
+
+form{
+    color: #AEABAB;
+    
+}
+
+.form{
+    
+    width:10rem;
+}
+
+select{
+    width: 10rem;
+    border-radius: 1.2rem;
+    height: 1.2rem;
+    font-family: 'gotreg';
+    font-size: 0.8rem;
+    background-color: #AEABAB;
+    appearance: none;
+    text-align: center;
+}
+
+
+.j{
+    color: #A56B27;
+    display: flex;
+    justify-content: flex-start;
+    width: 30vw;
+    font-size: 1.3rem;
+    font-family: 'grereg';
+    font-weight: 200;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+
+
+}
