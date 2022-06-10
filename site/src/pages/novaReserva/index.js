@@ -1,8 +1,24 @@
 import './index.scss';
+import {useState} from 'react'
+import { novaClick } from '../../api/reservaApi.js';
 
+export default function Index() {
+    const [nome, setNome] = useState('');
+    const [tel, setTel] = useState('');
+    const [data, setData] = useState('');
+    const [hora, setHora] = useState('');
+    const [pessoas, setPessoas] = useState('');
 
+    async function criarReserva(nome, tel, data, hora, pessoas) {
+        try {
+            const a = await novaClick(nome, tel, data, hora, pessoas);
 
-export default function index() {
+            alert('Reserva criada com sucesso!')
+        } catch (err) {
+            alert(err.message);
+        }
+    }
+
 
     return (
         <main className="bodyn">
@@ -14,23 +30,23 @@ export default function index() {
                     <h2>Reserva 11</h2>
                     <div>
                         <p>Nome do cliente:</p>
-                        <input type="text"/>
+                        <input type="text" value={nome} onChange={e => setNome(e.target.value)}/>
                     </div>
                     <div>
                         <p>Número de contato:</p>
-                        <input type="tel"/>
+                        <input type="tel" value={tel} onChange={e => setTel(e.target.value)}/>
                     </div>
                     <div>
                         <p>Data:</p>
-                        <input type="date"/>
+                        <input type="date" value={data} onChange={e => setData(e.target.value)}/>
                     </div>
                     <div>
                         <p>Hora:</p>
-                        <input type="time"/>
+                        <input type="time" value={hora} onChange={e => setHora(e.target.value)}/>
                     </div>
                     <div>
                         <p>Pessoas a comparecer:</p>
-                        <select id="pessoas">
+                        <select id="pessoas" value={pessoas} onChange={e => setPessoas(e.target.value)}>
                                         <option selected disabled value="">Selecione</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -65,7 +81,7 @@ export default function index() {
 
                         </select>
                     </div>
-                    <a href="#" className="t">Criar Reserva</a>
+                    <a href="#" className="t" onClick={criarReserva}>Criar Reserva</a>
                 </section>
             </section>
             <a href="../listaReserva">Cancelar</a>
