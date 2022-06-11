@@ -84,7 +84,7 @@ export default function Index() {
                     <a href="#" className="t" onClick={criarReserva}>Criar Reserva</a>
                 </section>
             </section>
-            <a href="../listaReserva">Cancelar</a>
+            <a href="../listaReserva" className='can'>Cancelar</a>
 
         </main>
     )
