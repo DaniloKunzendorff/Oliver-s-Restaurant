@@ -1,6 +1,6 @@
-import './index.scss';
+import './index.scss'
 import {useState} from 'react'
-import { novaClick } from '../../api/reservaApi.js';
+import { novaClick } from '../../api/reservaApi.js'
 
 export default function Index() {
     const [nome, setNome] = useState('');

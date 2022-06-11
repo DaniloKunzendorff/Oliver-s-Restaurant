@@ -19,7 +19,7 @@ export default function Index() {
         }
         catch(err){
             if(err.response.status === 401){
-                setErro(err.response.data.erro)
+                setErro(err.response.data.Erro)
             }
         }
     }
@@ -32,22 +32,27 @@ export default function Index() {
             </section>
             <section className="back">
                 <div className="pretear">
-                <h1 className="h1">Login Empresarial</h1>
+                    <h1 className="h1">Login Empresarial</h1>
 
-                <section className="faixa2">
-                    <div>
-                    <p className="email">Email:</p>
-                    <input className="espaço" type="text" value={email} onChange={e => setEmail(e.target.value)} />
-                    </div>
-                    <div>
+                    <section className="faixa2">
+                        <div>
+                        <p className="email">Email:</p>
+                        <input className="espaço" type="text" value={email} onChange={e => setEmail(e.target.value)} />
+                        </div>
+                        <div>
 
-                        <p className="senha">Senha:</p>
-                        <input className="espaço2" type="password"  value={senha} onChange={e => setSenha(e.target.value)}/>
+                            <p className="senha">Senha:</p>
+                            <input className="espaço2" type="password"  value={senha} onChange={e => setSenha(e.target.value)}/>
+                        </div>
+                    </section>
+                    <div className='bt'>
+                        <button className="botao" onClick={loginClick}>Entrar</button>
                     </div>
-                </section>
-                    <button className="botao" onClick={loginClick}>Entrar</button>
-                
+                    <div className="invalido">
+                        {erro}
+                    </div>
                 </div>
+
             </section>
             <section className="faixa3">
             </section>
