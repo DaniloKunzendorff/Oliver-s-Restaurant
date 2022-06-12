@@ -1,6 +1,6 @@
 import './index.scss'
 import {useState} from 'react'
-import { novaClick } from '../../api/reservaApi.js'
+import { novaClick } from '../../api/reservaApi'
 
 export default function Index() {
     const [nome, setNome] = useState('');
@@ -15,7 +15,8 @@ export default function Index() {
 
             alert('Reserva criada com sucesso!')
         } catch (err) {
-            alert(err.message);
+           
+            alert(err.message)
         }
     }
 
@@ -81,11 +82,17 @@ export default function Index() {
 
                         </select>
                     </div>
-                    <a href="#" className="t" onClick={criarReserva}>Criar Reserva</a>
+                    <div className='criar'>
+                        <button href="#" className="t" onClick={criarReserva}>Criar Reserva</button>
+                    </div>
+                    <div className='erro'>
+                        Insira todos os campos
+                    </div>
                 </section>
             </section>
-            <a href="../listaReserva" className='can'>Cancelar</a>
-
+            <div className='c'>
+                <a href="../listaReserva" className='can'>Cancelar</a>
+            </div>
         </main>
     )
 
