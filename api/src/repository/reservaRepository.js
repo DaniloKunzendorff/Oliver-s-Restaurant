@@ -20,12 +20,12 @@ export async function consultarPendencias(status) {
                     where  ds_status  like '%pendente%';`
 
     const [linhas] = await con.query(comando, [status]);
-    return linhas[0];
+    return linhas;
 }
 
 export async function removerReserva(id, reserva) {
     const comando = `update tb_reserva
-                        set ds_status   = 'cancelada'
+                        set ds_status   = 'Cancelada'
                       where id_reserva  = ?`
     const [RESPOSTA] = await con.query(comando, [id]);
     return RESPOSTA.affectedRows;
@@ -35,7 +35,7 @@ export async function removerReserva(id, reserva) {
 
 export async function confirmarReserva(id, reserva) {
     const comando = `update tb_reserva
-                        set ds_status   = 'concluído'
+                        set ds_status   = 'Concluído'
                       where id_reserva  = ?`
     const [RESPOSTA] = await con.query(comando, [id]);
     return RESPOSTA.affectedRows;

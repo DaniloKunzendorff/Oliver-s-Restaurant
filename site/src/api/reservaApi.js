@@ -13,3 +13,8 @@ export async function novaClick(nome, tel, data, hora, pessoas) {
     })
     return resposta.data;
 }
+
+export async function listaPedentes() {
+    const resposta = await api.get('/reserva/pendente');
+    return resposta.data;
+}
