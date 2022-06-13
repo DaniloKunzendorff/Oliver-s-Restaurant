@@ -140,7 +140,7 @@ export default function index() {
                 
                 <div className='co'>
                     <p className='tik'>2022</p>
-                    <p className='pa2'>Em 2022 nosso objetivo é abrir outros restaurante em varios lugares de São paulo. </p>
+                    <p className='pa2'>Em 2022 nosso objetivo é abrir outros restaurante em varios lugares de São Paulo. </p>
                 </div>
             </div>
             </section>        
