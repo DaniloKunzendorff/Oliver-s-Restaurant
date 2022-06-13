@@ -1,4 +1,7 @@
+*{
+    border: 1px green solid;
 
+}
 
 .bodylista{
     
@@ -100,6 +103,10 @@ td{
     color: #010915;
 }
 
+tr{
+
+}
+
 table{
     border-collapse: collapse;
     width: 85vw;
@@ -107,8 +114,6 @@ table{
 
 tbody{
     background-color: #AEABAB;
-    width: 90vw;
-    height: 2rem; 
     text-align: center;
 }
 
@@ -130,11 +135,18 @@ tbody tr:nth-child(even) {
 }
 
 img{
-    width: 4rem;
-    height: 2rem;
+    width: 1rem;
+    height: 0.9rem;
+    
 }
 
-
+.imgs{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 

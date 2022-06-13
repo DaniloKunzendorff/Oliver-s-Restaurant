@@ -57,11 +57,11 @@ export default function Index() {
                                     <td>{item.data}</td>
                                     <td>{item.hora}</td>
                                     <td>{item.pessoas}</td>
-                                    <div>
+                                    <td className='imgs'>
                                         <img src={editar} alt="editar" />
                                         <img src={sim} alt="sim" />
                                         <img src={nao} alt="nao" />
-                                    </div>
+                                    </td>
                                 </tr>
                             )}
 
