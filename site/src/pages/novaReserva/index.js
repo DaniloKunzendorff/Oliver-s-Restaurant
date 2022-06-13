@@ -9,7 +9,7 @@ export default function Index() {
     const [hora, setHora] = useState('');
     const [pessoas, setPessoas] = useState('');
 
-    async function criarReserva(nome, tel, data, hora, pessoas) {
+    async function criarReserva() {
         try {
             const a = await novaClick(nome, tel, data, hora, pessoas);
 

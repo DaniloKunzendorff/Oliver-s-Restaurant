@@ -52,10 +52,10 @@ export default function Index() {
                             {reserva.map(item => 
                                 <tr>
                                     <td>{item.id}</td>
-                                    <td>{item.nome}</td>
-                                    <td>{item.tel}</td>
-                                    <td>{item.data}</td>
-                                    <td>{item.hora}</td>
+                                    <td>{item.cliente}</td>
+                                    <td>{item.telefone}</td>
+                                    <td>{item.reserva.substr(0, 10)}</td>
+                                    <td>{item.reserva.substr(11, 5)}</td>
                                     <td>{item.pessoas}</td>
                                     <td className='imgs'>
                                         <img src={editar} alt="editar" />

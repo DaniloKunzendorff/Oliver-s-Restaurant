@@ -1,7 +1,4 @@
-*{
-    border: 1px green solid;
 
-}
 
 .bodylista{
     
@@ -95,12 +92,16 @@ header{
 
 th{
     text-align: center;
+    font-family: 'grereg';
     color: #FFF;
+    font-weight: 100;
 }
 
 td{
     text-align: center;
     color: #010915;
+    font-family: 'her';
+
 }
 
 tr{
@@ -141,7 +142,7 @@ img{
 }
 
 .imgs{
-    
+
     display: flex;
     flex-direction: row;
     align-items: center;

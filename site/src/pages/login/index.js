@@ -1,6 +1,7 @@
 import './index.scss';
 import Logo from '../../assets/images/LOGO.png';
 import { login } from '../../api/funcionarioApi.js';
+import storage from 'local-storage';
 import { useNavigate } from 'react-router-dom';
 import { useState, useRef } from 'react';
 import LoadingBar from 'react-top-loading-bar'
@@ -10,6 +11,7 @@ export default function Index() {
     const [senha, setSenha] = useState('');
     const [erro, setErro] = useState('');
     const [carregando, setCarregando] = useState(false);
+
 
     const navigate = useNavigate();
     const ref = useRef();
@@ -22,6 +24,7 @@ export default function Index() {
         ref.current.continuousStart()
         try{
             const a = await login(email, senha);
+            storage('funcionario-logado', a)
 
             setTimeout(()=>{
                 navigate('/tabelaADM')
