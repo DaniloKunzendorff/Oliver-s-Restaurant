@@ -419,199 +419,235 @@
         align-items: center;
         justify-content: center;
     }
-    @media(max-widht: 1280 ){
     
-    }
-    @media(max-widht: 800  ){
-        
+    @media(max-width: 800px ){
 
-    .roda-pe{
-        background-color: #2e2e2e;
-        height: 34rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    .logos-p{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        
-    }
-
-    .logo-2{
-        width: 10rem;
-        height: 9rem;
-        margin-left: 11rem;
-    }
-
-    .logos-a{
-        display: flex;
-        flex-direction: column;
-        width: 11rem;
-        height: 17rem;
-        justify-content: space-evenly;
-    }
-
-    .logos-t{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-
-
-    .email-1{
-        color: #ffffffe5;
-        margin-left: 0.5rem;
-        
-        font-family: 'balsa';
-    }
-
-    .logos-w{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-
-
-    .numero-1{
-        color: #ffffffe5;
-        margin-left: 0.5rem;
-        
-        font-family: 'balsa';
-    }
-
-    .logos-i{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-
-
-
-    .email-2{
-        color: #ffffffe5;
-        margin-left: 0.5rem;
-        font-family: 'balsa';
-    }
-
-    .logos-f{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    .l-2{
-        width: 3vw;
-        height: 5vh;
-    }
-
-    .l-6{
-        width: 3vw;
-        height: 5vh;
-    }
-
-    .l-3{
-        width: 3vw;
-        height: 5vh;
-    }
-
-    .l-4{
-        width: 3vw;
-        height: 5vh;
-    }
-
-    .l-5{
-        width: 3vw;
-        height: 5vh;
-    }
-
-
-    .face{
-        color: #ffffffe5;
-        font-family: 'balsa';
-        margin-left: 0.5rem;
+        .button1{
+            border: 0;
+            width: 2vw;
+            height: 4vh;
+            border-radius: 0.0rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #AEABAB;
+            color: #010915;
+            font-size: 1.5rem;
+        }
     
+        .button1:hover{
+            border: 0;
+            width: 2.1vw;
+            height: 4.1vh;
+            border-radius: 0.0rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #AEABAB;
+            color: #010915;
+            font-size: 1.5rem;
+        }
+        
+    .input1{
+        width: 10vw;
+        border: 0;
+        border-radius: 0.3rem;
+        text-align: center;
+        color: #010915;
+        background-color: #AEABAB;
+        font-family: 'her';
+        font-size: 11px;
     }
+        
 
-    .logos-e{
+        .roda-pe{
+            background-color: #2e2e2e;
+            height: 34rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .logos-p{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            
+        }
+
+        .logo-2{
+            width: 10rem;
+            height: 9rem;
+            margin-left: 1rem;
+        }
+
+        .logos-a{
+            display: flex;
+            flex-direction: column;
+            width: 11rem;
+            height: 17rem;
+            justify-content: space-evenly;
+        }
+
+        .logos-t{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+
+
+        .email-1{
+            color: #ffffffe5;
+            margin-left: 0.5rem;
+            
+            font-family: 'balsa';
+        }
+
+        .logos-w{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+
+
+        .numero-1{
+            color: #ffffffe5;
+            margin-left: 0.5rem;
+            font-size: 14px;
+            font-family: 'balsa';
+        }
+
+        .logos-i{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+
+
+
+        .email-2{
+            color: #ffffffe5;
+            margin-left: 0.5rem;
+            font-family: 'balsa';
+        }
+
+        .logos-f{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .l-2{
+            width: 3vw;
+            height: 5vh;
+        }
+
+        .l-6{
+            width: 3vw;
+            height: 5vh;
+        }
+
+        .l-3{
+            width: 3vw;
+            height: 5vh;
+        }
+
+        .l-4{
+            width: 3vw;
+            height: 5vh;
+        }
+
+        .l-5{
+            width: 3vw;
+            height: 5vh;
+        }
+
+
+        .face{
+            color: #ffffffe5;
+            font-family: 'balsa';
+            margin-left: 0.5rem;
+        
+        }
+
+        .logos-e{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            
+        }
+
+
+
+        .email-3{
+            color: #ffffffe5;
+            margin-left: 0.5rem;
+            font-family: 'balsa';
+        }
+
+
+
+        .lugar{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding: 2rem;
+            width: 42rem;
+        }
+
+
+        .local{
+            color: #ffffffe5;
+            font-family: 'balsa';
+            display: flex;
+            align-items: center;
+        }
+
+        .lu-g{
         display: flex;
-        align-items: center;
         flex-direction: row;
-        
-    }
+            margin-top: 2rem;
+        }
 
 
 
-    .email-3{
-        color: #ffffffe5;
-        margin-left: 0.5rem;
-        font-family: 'balsa';
-    }
+        .b33{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1;
+            margin-top: 10vh;
 
+        }
 
+        .log-21{
+            display: flex;
+            width: 30rem ;
+            height: 14rem ;
+            flex-direction: column;
+            background-size: 100%;
+            background-image: url('../../assets//images/Opera\ Instantâneo_2022-05-13_081642_www.google.com.png');
+            background-position: 100px;
+        }
 
-    .lugar{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-start;
-        padding: 2rem;
-        width: 42rem;
-    }
+        .log-21:hover{
+            display: flex;
+            width: 30rem;
+            height: 14.5rem;
+            flex-direction: column;
+            background-size: 100%;
+            background-image: url('../../assets/images/Opera\ Instantâneo_2022-05-13_081642_www.google.com.png');
+        }
 
-
-    .local{
-        color: #ffffffe5;
-        font-family: 'balsa';
-        display: flex;
-        align-items: center;
-    }
-
-    .lu-g{
-    display: flex;
-    flex-direction: row;
-        margin-top: 2rem;
-    }
-
-
-
-    .b33{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-right: 1;
-        margin-top: 10vh;
-
-    }
-
-    .log-21{
-        display: flex;
-        width: 25rem;
-        height: 14rem;
-        flex-direction: column;
-        background-size: 100%;
-        background-image: url('../../assets//images/Opera\ Instantâneo_2022-05-13_081642_www.google.com.png');
-    }
-
-    .log-21:hover{
-        display: flex;
-        width: 38.5rem;
-        height: 14.5rem;
-        flex-direction: column;
-        background-size: 100%;
-        background-image: url('../../assets/images/Opera\ Instantâneo_2022-05-13_081642_www.google.com.png');
-    }
-
-    .log-23{
-        width: 25rem;
-        height: 18rem;
-        
-    }
+        .log-23{
+            width: 25rem;
+            height: 18rem;
+            
+        }
     }
     
 
