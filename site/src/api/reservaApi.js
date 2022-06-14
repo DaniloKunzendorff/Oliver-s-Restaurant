@@ -5,13 +5,12 @@ const api = axios.create({
 
 export async function novaClick(nome, tel, data, hora, pessoas) {
 
-    alert(nome);
 
     const resposta = await api.post('/reserva/nova', {
         nome : nome,
-        tel : tel,
-        data : data, 
-        hora : hora,
+        telefone : tel,
+        reserva : data, 
+        reserva : hora,
         pessoas : pessoas
     })
     return resposta.data;

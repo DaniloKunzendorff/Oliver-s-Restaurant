@@ -27,7 +27,7 @@ export default function Index() {
                 <h4>NOVA RESERVA</h4>
             </section>
             <section className="fundo">
-                <section class="preto">
+                <section className="preto">
                     <h2>Reserva 11</h2>
                     <div>
                         <p>Nome do cliente:</p>
@@ -48,7 +48,7 @@ export default function Index() {
                     <div>
                         <p>Pessoas a comparecer:</p>
                         <select id="pessoas" value={pessoas} onChange={e => setPessoas(e.target.value)}>
-                                        <option selected disabled value="">Selecione</option>
+                                        <option selected disabled>Selecione</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
