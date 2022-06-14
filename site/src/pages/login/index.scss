@@ -165,5 +165,68 @@
         font-size: 1.3rem;
         font-family: '';
     }
+    
 
+
+    
+@media(max-width: 1280px){
+    .faixa1{
+        display: flex;
+        flex-direction: row;
+        background-color: #010915;
+        justify-content: space-around;
+        height: 7rem;
+        align-items: center;
+    }
+
+    .s{
+        color: #a4a4a4;
+        font-family: 'grereg';
+        text-decoration: none;
+        font-size: 1.8rem;
+
+    }
+    .back{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center ;
+        height: 80vh;
+        background-color: #00000095;
+    }
+
+    .botao{
+        width: 8rem;
+        border-radius: 2rem;
+        height: 2.8rem;
+        background-color: #C6781E;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        font-size: 1.8rem;
+        font-family: 'grereg';
+        border: 0ch;
+    }
+    .faixa3{
+        display: flex;
+        flex-direction: row;
+        background-color: #010915;
+        height: 4;
+    }
+
+    
+}
+}
+
+@media(max-width: 1280px){
+
+    .bodyl{
+            background-image: url('../../assets/images/login.jpg');
+            background-size: 150%;
+            background-position: 50% 50%;
+            height: 91vh;
+    }
 }

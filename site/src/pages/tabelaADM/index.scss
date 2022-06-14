@@ -98,4 +98,33 @@
             color: #AEABAB !important;
         }
 
-    }    
+        @media(max-width: 1280px){
+            .faixa3{
+                background-color: #010915;
+                height: 12vh !important;
+                
+            }
+
+
+            .faixa1{
+
+                display: flex !important;
+                flex-direction: row !important;
+                background-color: #010915 !important;
+                height: 12vh !important;
+                color: #ffff !important;
+                justify-content: space-around !important;
+                align-items: center !important;
+        
+                
+            }
+        }
+
+    } 
+    
+    
+    @media(max-width: 1280px){
+        .bodyt{
+            
+        }
+    }
