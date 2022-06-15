@@ -175,7 +175,7 @@
         flex-direction: row;
         background-color: #010915;
         justify-content: space-around;
-        height: 7rem;
+        height: 8rem;
         align-items: center;
     }
 
@@ -214,19 +214,29 @@
         display: flex;
         flex-direction: row;
         background-color: #010915;
-        height: 4;
+        height: 4.4rem;
     }
+
+    .b{
+        width: 10rem;
+        height: 10rem;
+        align-self: flex-start;
+    }
+
 
     
 }
+
+
+
+
 }
-
 @media(max-width: 1280px){
-
-    .bodyl{
-            background-image: url('../../assets/images/login.jpg');
-            background-size: 150%;
-            background-position: 50% 50%;
-            height: 91vh;
-    }
+.bodyl{
+    background-image: url('../../assets/images/login.jpg');
+    background-size: 142%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+    
 }

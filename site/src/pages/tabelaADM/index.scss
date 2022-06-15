@@ -67,7 +67,7 @@
         }
         .faixa3{
             background-color: #010915;
-            height: 15vh !important;
+            height: 10vh !important;
             
         }
 
@@ -118,13 +118,181 @@
         
                 
             }
+            .logo{
+                height: 10em;
+                width: 10.5em;
+                align-self: flex-start !important;
+                
+            }
+            .volt{
+                font-family: 'Grenze2' !important;
+                font-size: 1.9em !important;
+                text-decoration: none !important;
+                color: #AEABAB !important;
+            }
         }
+
+
+        @media(max-width: 480px){
+            .faixa3{
+                background-color: #010915;
+                height: 12vh !important;
+                
+            }
+
+
+            .faixa1{
+
+                display: flex !important;
+                flex-direction: row !important;
+                background-color: #010915 !important;
+                height: 12vh !important;
+                color: #ffff !important;
+                justify-content: space-around !important;
+                align-items: center !important;
+        
+                
+            }
+            .logo{
+                height: 9em;
+                width: 9.5em;
+                align-self: flex-start !important;
+                
+            }
+            .volt{
+                font-family: 'Grenze2' !important;
+                font-size: 1.6em !important;
+                text-decoration: none !important;
+                color: #AEABAB !important;
+            }
+        }
+
+
+
+
+        @media(max-width: 1000px){
+            .faixa3{
+                background-color: #010915;
+                height: 12vh !important;
+                
+            }
+
+
+            .faixa1{
+
+                display: flex !important;
+                flex-direction: row !important;
+                background-color: #010915 !important;
+                height: 12vh !important;
+                color: #ffff !important;
+                justify-content: space-around !important;
+                align-items: center !important;
+        
+                
+            }
+            .logo{
+                height: 9em;
+                width: 9.5em;
+                align-self: flex-start !important;
+                
+            }
+            .volt{
+                font-family: 'Grenze2' !important;
+                font-size: 1.6em !important;
+                text-decoration: none !important;
+                color: #AEABAB !important;
+            }
+        }
+
+
+        
+        @media(max-width: 360px){
+            .faixa3{
+                background-color: #010915;
+                height: 16vh !important;
+                
+            }
+
+
+            .faixa1{
+
+                display: flex !important;
+                flex-direction: row !important;
+                background-color: #010915 !important;
+                height: 13vh !important;
+                color: #ffff !important;
+                justify-content: space-around !important;
+                align-items: center !important;
+        
+                
+            }
+            .logo{
+                height: 7em;
+                width: 7.5em;
+                align-self: flex-start !important;
+                position: relative !important;
+
+                
+            }
+            .volt{
+                font-family: 'Grenze2' !important;
+                font-size: 1.6em !important;
+                text-decoration: none !important;
+                color: #AEABAB !important;
+            }
+            .faixa2{
+                height: 70vh !important;
+                width: 100vw !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: space-evenly !important;
+            }
+
+            .adm{
+                font-size: 2em;
+                color: #ffff;
+                font-family: "Grenze2";
+                text-align: center;
+                letter-spacing: 1px;
+                width: 10em;
+                height: 3em;
+                margin-bottom: 1rem;
+            }
+                
+        }
+
 
     } 
     
     
     @media(max-width: 1280px){
         .bodyt{
-            
+            background-image: url('../../assets/images/login.jpg');
+            background-size: 120%;
+            background-repeat: no-repeat;
+            background-position: 50%;
         }
     }
+
+    @media(max-width: 1000px){
+        .bodyt{
+            background-image: url('../../assets/images/login.jpg');
+            background-size: 140%;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+    }
+
+
+    @media(max-width: 480px){
+        .bodyt{
+            background-image: url('../../assets/images/login.jpg');
+            background-size: 300%;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+    }
+
+
+  
