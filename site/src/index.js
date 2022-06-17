@@ -24,6 +24,7 @@ root.render(
         <Route path='/login/' element={<Login />} />
         <Route path='/tabelaADM/' element={<Menu />} />
         <Route path='/novaReserva/' element={<Nova />} />
+        <Route path='/alterarReserva/:id' element={<Nova />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

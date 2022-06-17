@@ -2,7 +2,7 @@ import { con } from '../repository/connection.js'
 
 export async function resgistrarNova(reserva) {
     const comando = `insert INTO TB_RESERVA (ID_FUNCIONARIO,NM_CLIENTE, DS_TELEFONE, DT_RESERVA, NR_PESSOAS, ds_status)
-    values(?, ?, ?, ?, ?, ?);`
+    values(?, ?, ?, ?, ?, 'Pendente');`
 
     const [resposta] = await con.query(comando, [reserva.funcionario, reserva.cliente, reserva.telefone, reserva.data, reserva.pessoas, reserva.status]);
     reserva.id = resposta.insertId;
@@ -51,4 +51,19 @@ export async function alterarReserva(id, reserva) {
                       where id_reserva  = ?`
     const [RESPOSTA] = await con.query(comando, [reserva.cliente, reserva.telefone, reserva.reserva, reserva.pessoas, reserva.status, id]);
     return RESPOSTA.affectedRows;
+}
+
+export async function consultarReservaID(id) {
+    const comando = `select  id_reserva  	id,
+                            id_funcionario  funcionario,
+                            nm_cliente  	cliente,
+                            ds_telefone 	telefone,
+                            dt_reserva  	reserva,
+                            nr_pessoas  	pessoas,
+                            ds_status   	status
+                    from 	tb_reserva
+                    where  id_reserva = ?`;
+
+    const [linhas] = await con.query(comando, [id]);
+    return linhas[0];
 }

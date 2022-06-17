@@ -1,9 +1,8 @@
 .bodyt{
     background-image: url('../../assets/images/login.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 50%;
-
+    background-size: 130%;
+    background-position: 50% 50%;  
+    height: 100vh;
 
     .faixa1{
 
@@ -18,7 +17,7 @@
         
     }
     .faixa2{
-        height: 70vh !important;
+        height: 76vh !important;
         width: 100vw !important;
         display: flex !important;
         flex-direction: column !important;
@@ -79,7 +78,7 @@
             justify-content: space-evenly !important;
             align-items: center !important;
             width: 100vw !important;
-            height: 60vh !important;
+            height: 70vh !important;
             background-color: #000000ae !important;
             padding-bottom: 6.1rem !important;
         }
@@ -88,7 +87,7 @@
             height: 7em;
             width: 7.5em;
             align-self: flex-start !important;
-            
+            position: relative;
         }
 
         .volt{

@@ -5,11 +5,18 @@ import { listaPedentes } from '../../api/reservaApi';
 import sim from '../../assets/images/sim.png'
 import nao from '../../assets/images/nao.png'
 import editar from '../../assets/images/editar.png'
-
+import { useNavigate } from 'react-router-dom';
+import storage from 'local-storage';
 
 export default function Index() {
     const [reserva,setReserva] = useState([]);
+    const navigate = useNavigate();
 
+    useEffect(() => {
+        if(!storage('funcionario-logado')) {
+            navigate('/login')
+        }
+    })
 
     async function carregarPendente() {
         const resp = await listaPedentes();
@@ -58,9 +65,9 @@ export default function Index() {
                                     <td>{item.reserva.substr(11, 5)}</td>
                                     <td>{item.pessoas}</td>
                                     <td className='imgs'>
-                                        <img src={editar} alt="editar" />
-                                        <img src={sim} alt="sim" />
-                                        <img src={nao} alt="nao" />
+                                        <button><img src={editar} alt="editar" className='editar' /></button>
+                                        <button><img src={sim} alt="sim" className='sim' /></button>
+                                        <button><img src={nao} alt="nao" className='nao' /></button>
                                     </td>
                                 </tr>
                             )}

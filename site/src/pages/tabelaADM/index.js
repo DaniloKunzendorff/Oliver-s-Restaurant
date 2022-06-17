@@ -1,7 +1,17 @@
 import './index.scss';
 import Logo from "../../assets/images/LOGO.png";
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import storage from 'local-storage'
 
-export default function index() {
+export default function Index() {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if(!storage('funcionario-logado')) {
+            navigate('/login')
+        }
+    })
 
     return (
         <main className='bodyt'>

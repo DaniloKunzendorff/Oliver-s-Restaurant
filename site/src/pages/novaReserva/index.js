@@ -1,19 +1,36 @@
 import './index.scss'
-import {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
+import {useEffect, useState} from 'react'
 import { novaClick } from '../../api/reservaApi'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useParams } from 'react-router-dom';
+import storage from 'local-storage';
 
 export default function Index() {
     const [nome, setNome] = useState('');
     const [tel, setTel] = useState('');
     const [data, setData] = useState('');
     const [hora, setHora] = useState('');
-    const [pessoas, setPessoas] = useState('');
+    const [pessoas, setPessoas] = useState(0);
+
+    
+    const {idParam} = useParams();
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if(!storage('funcionario-logado')) {
+            navigate('/login')
+        }
+    })
 
     async function criarReserva() {
         try {
-            const a = await novaClick(nome, tel, data, hora, pessoas);
+            const funcionario = storage('funcionario-logado').id;
+            const a = await novaClick(nome, tel, data, hora, pessoas, funcionario);
 
-            alert('Reserva criada com sucesso!')
+            toast.dark('Reserva criada com sucesso!')
         } catch (err) {
            
             alert(err.message)
@@ -22,10 +39,11 @@ export default function Index() {
 
 
     return (
+        
         <main className="bodyn">
-            <section className="j">
+            <header className="j">
                 <h4>NOVA RESERVA</h4>
-            </section>
+            </header>
             <section className="fundo">
                 <section className="preto">
                     <h2>Reserva 11</h2>

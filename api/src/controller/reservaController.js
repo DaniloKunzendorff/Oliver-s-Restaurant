@@ -1,4 +1,4 @@
-import {resgistrarNova, consultarPendencias, removerReserva, confirmarReserva, alterarReserva} from '../repository/reservaRepository.js'
+import {resgistrarNova, consultarPendencias, removerReserva, confirmarReserva, consultarReservaID, alterarReserva} from '../repository/reservaRepository.js'
 
 import { Router  } from "express"
 const server = Router();
@@ -11,7 +11,7 @@ server.post('/reserva/nova', async (req,resp) => {
         if(!resgistrar.telefone) throw new Error ("Telefone é OBRIGATÓRIO!")
         if(!resgistrar.data) throw new Error ("Data da reserva é OBRIGATÓRIA!")
         if(!resgistrar.pessoas) throw new Error ("QTD. de pessoas é OBRIGATÓRIO!")
-        if(!resgistrar.status) throw new Error ("Status da reserva é OBRIGATÓRIA")
+        
 
 
         const RESPOSTA = await resgistrarNova (resgistrar)
@@ -26,7 +26,7 @@ server.post('/reserva/nova', async (req,resp) => {
 })
 
 
-//consulta apenas a primeira pendente
+
 server.get('/reserva/:status', async (req, resp) => {
     try
     {
@@ -43,7 +43,7 @@ server.get('/reserva/:status', async (req, resp) => {
             Erro: err.message
         })
     }
-})
+});
 
 
 server.put('/reserva/confirmar/:id', async (req, resp) => {
@@ -60,7 +60,7 @@ server.put('/reserva/confirmar/:id', async (req, resp) => {
             erro: err.message
         })
     }
-})
+});
 
 server.put('/reserva/remover/:id', async (req, resp) => {
     try {
@@ -77,7 +77,7 @@ server.put('/reserva/remover/:id', async (req, resp) => {
             Erro: err.message
         })
     }
-})
+});
 
 
 server.put('/reserva/alterar/:id', async (req, resp) => {
@@ -86,7 +86,7 @@ server.put('/reserva/alterar/:id', async (req, resp) => {
         const reserva = req.body;
 
         const resposta = await alterarReserva(id, reserva);
-        resp.status(200).send({
+        resp.status(204).send({
             Resposta: "Reseva alterada"
         })
     } catch (err) {
@@ -94,9 +94,25 @@ server.put('/reserva/alterar/:id', async (req, resp) => {
             erro: err.message
         })
     }
+});
+
+server.get('/reserv/consultar/:id', async (req, resp) => {
+    try
+    {
+        const { id } = req.params;
+        const RESPOSTA = await consultarReservaID(id);
+
+        if(!RESPOSTA) throw new Error("Reserva não encontrada")
+
+        resp.send(RESPOSTA);
+    }
+    catch(err)
+    {
+        resp.status(400).send({
+            Erro: err.message
+        })
+    }
 })
-
-
 
 
 

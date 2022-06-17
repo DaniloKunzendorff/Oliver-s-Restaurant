@@ -4,6 +4,11 @@ SELECT *FROM (TB_RESERVA);
 
 SELECT *FROM (TB_FUNCIONARIO);
 
+update tb_funcionario
+set ds_senha = 'admin',
+	ds_email = 'admin@olivers.com'
+where id_funcionario = 2;    
+    
 
 -- carga inicial funcionario
 insert INTO TB_FUNCIONARIO (DS_SENHA, DS_EMAIL)
@@ -31,21 +36,23 @@ select  id_reserva  	id,
  where  ds_status  like '%pendente%';
 
 -- CSU04: confirmar reserva
-delete from	tb_reserva
-	  where	id_reserva = 3;
-
+update  tb_reserva
+   set  ds_status   = 'Concluído'
+ where  id_reserva  = 1;
+ 
 -- CSU05: remover reserva
-delete from	tb_reserva
-	  where	id_reserva = 1;
+update  tb_reserva
+   set  ds_status   = 'Pendente'
+ where  id_reserva  = 14;
 
 -- CSU06: alterar reserva
 update  tb_reserva
-   set	nm_cliente  = 'Roberto Carlos',
-		ds_telefone = '(11) 98451-6264',
-        dt_reserva  = '2022-06-30 14:20:00',
+   set	id_funcionario = 1,
+		nm_cliente  = 'Jorge Cleito',
+		ds_telefone = '(21) 92375-7442',
+        dt_reserva  = '2022-11-03 19:00:00',
         nr_pessoas  = 2,
-        ds_status   = 'pendente'
- where  id_reserva  = 2;
- 
+        ds_status   = 'Pendente'
+ where  id_reserva  = 8;
  
  
