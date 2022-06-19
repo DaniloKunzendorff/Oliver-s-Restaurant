@@ -46,10 +46,9 @@ export async function alterarReserva(id, reserva) {
                         set nm_cliente  = ?,
                             ds_telefone = ?,
                             dt_reserva  = ?,
-                            nr_pessoas  = ?,
-                            ds_status   = ?
+                            nr_pessoas  = ?
                       where id_reserva  = ?`
-    const [RESPOSTA] = await con.query(comando, [reserva.cliente, reserva.telefone, reserva.reserva, reserva.pessoas, reserva.status, id]);
+    const [RESPOSTA] = await con.query(comando, [reserva.cliente, reserva.telefone, reserva.reserva, reserva.pessoas, id]);
     return RESPOSTA.affectedRows;
 }
 

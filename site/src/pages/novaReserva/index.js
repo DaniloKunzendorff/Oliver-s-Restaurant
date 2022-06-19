@@ -1,8 +1,7 @@
 import './index.scss'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react'
-import { novaClick } from '../../api/reservaApi'
-import 'react-toastify/dist/ReactToastify.css';
+import { editarReserva, novaClick, porID} from '../../api/reservaApi'
 import storage from 'local-storage';
 
 export default function Index() {
@@ -10,7 +9,9 @@ export default function Index() {
     const [telefone, setTelefone] = useState('');
     const [reserva, setReserva] = useState('');
     const [pessoas, setPessoas] = useState(0);
-    
+    const [erro, setErro] = useState('');
+
+    const {id} = useParams();
 
     const navigate = useNavigate();
 
@@ -20,6 +21,36 @@ export default function Index() {
         }
     })
 
+
+    useEffect(() => {
+        if (id){
+            buscarReserva();
+        }
+    }, [])
+
+    async function buscarReserva() {
+        const resposta = await porID(id);
+        setCliente(resposta.cliente);
+        setTelefone(resposta.telefone);
+        setReserva(resposta.reserva.substr(0,16));
+        setPessoas(resposta.pessoas);
+
+
+    }
+
+    async function alterarReserva() {
+        try {
+            const a = await editarReserva(id, cliente, telefone, reserva, pessoas);
+
+            alert('Reserva alterada com sucesso!')
+        } catch (err) {
+            if(err.response.status === 400){
+                setErro(err.response.data.erro)
+            }
+        }
+    }
+  
+
     async function criarReserva() {
         try {
             const funcionario = storage('funcionario-logado').id;
@@ -27,7 +58,9 @@ export default function Index() {
 
             alert('Reserva criada com sucesso!')
         } catch (err) {
-            alert(err.message)
+            if(err.response.status === 400){
+                setErro(err.response.data.Erro)
+            }
         }
     }
 
@@ -92,10 +125,11 @@ export default function Index() {
                         </select>
                     </div>
                     <div className='criar'>
+                        <button href="#" className="t" onClick={alterarReserva}>Alterar Reserva</button>
                         <button href="#" className="t" onClick={criarReserva}>Criar Reserva</button>
                     </div>
                     <div className='erro'>
-                        Insira todos os campos
+                        {erro}
                     </div>
                 </section>
             </section>

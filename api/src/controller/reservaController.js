@@ -6,7 +6,7 @@ const server = Router();
 server.post('/reserva/nova', async (req,resp) => {
     try{
         const resgistrar = req.body;
-        if(!resgistrar.id) throw new Error ("Id do funcionario é OBRIGATÓRIO!")
+        if(!resgistrar.funcionario) throw new Error ("Id do funcionario é OBRIGATÓRIO!")
         if(!resgistrar.cliente) throw new Error ("Nome do cliente é OBRIGATÓRIO!")
         if(!resgistrar.telefone) throw new Error ("Telefone é OBRIGATÓRIO!")
         if(!resgistrar.reserva) throw new Error ("Data da reserva é OBRIGATÓRIA!")
@@ -96,7 +96,7 @@ server.put('/reserva/alterar/:id', async (req, resp) => {
     }
 });
 
-server.get('/reserv/consultar/:id', async (req, resp) => {
+server.get('/reserva/consultar/:id', async (req, resp) => {
     try
     {
         const { id } = req.params;

@@ -1,7 +1,7 @@
 import './index.scss';
 import Logo from '../../assets/images/LOGO.png';
 import { useEffect, useState } from 'react'
-import { listaPedentes, porID, editarReserva, removerReserva } from '../../api/reservaApi';
+import { listaPedentes, editarReserva, removerReserva, concluirReserva} from '../../api/reservaApi';
 import sim from '../../assets/images/sim.png'
 import nao from '../../assets/images/nao.png'
 import editar from '../../assets/images/editar.png'
@@ -18,10 +18,18 @@ export default function Index() {
         }
     })
 
-    async function cancelarReserva(status) {
-        
-        const resp = removerReserva(status);
-        console.log(resp)
+    async function confirmarReserva(id) {
+        const resp = concluirReserva(id);
+        alert('Reserva concluída.')
+    }
+
+    async function alterarReserva(id) {
+        navigate(`/alterar/${id}`)
+    }
+
+    async function cancelarReserva(id) {
+        const resp = removerReserva(id);
+        alert('Reserva cancelada.')
     }
 
     async function carregarPendente() {
@@ -70,9 +78,9 @@ export default function Index() {
                                     <td>{item.reserva.substr(11, 5)}</td>
                                     <td>{item.pessoas}</td>
                                     <td className='imgs'>
-                                        <button><img src={editar} alt="editar" className='editar' /></button>
-                                        <button><img src={sim} alt="sim" className='sim' /></button>
-                                        <button onClick={cancelarReserva}><img src={nao} alt="nao" className='nao' /></button>
+                                        <button><img src={editar} alt="editar" className='editar'/></button>
+                                        <button onClick={carregarPendente}><img src={sim} alt="sim" className='sim' onClick={() => confirmarReserva(item.id)} /></button>
+                                        <button onClick={carregarPendente}><img src={nao} alt="nao" className='nao' onClick={() => cancelarReserva(item.id)} /></button>
                                     </td>
                                 </tr>
                             )}

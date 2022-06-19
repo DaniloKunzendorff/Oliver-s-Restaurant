@@ -36,9 +36,14 @@ export async function editarReserva(id,cliente, telefone, reserva, pessoas) {
     return resposta.data;
 }
 
-export async function removerReserva(id, status) {
+export async function removerReserva(id) {
     const resposta = await api.put(`/reserva/remover/${id}`, {
-        status : status
     })
-    return resposta.data;
+    return resposta.status;
+}
+
+export async function concluirReserva(id) {
+    const resposta = await api.put(`/reserva/confirmar/${id}`, {
+    })
+    return resposta.status;
 }
