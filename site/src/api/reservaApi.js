@@ -47,3 +47,15 @@ export async function concluirReserva(id) {
     })
     return resposta.status;
 }
+
+export async function novaClickCliente(cliente, telefone, reserva, pessoas) {
+
+
+    const resposta = await api.post('/reserva/nova/cliente', {
+        cliente : cliente,
+        telefone : telefone,
+        reserva : reserva, 
+        pessoas : pessoas
+    })
+    return resposta.data;
+}

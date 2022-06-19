@@ -1,4 +1,6 @@
 import './index.scss';
+import { novaClickCliente } from '../../api/reservaApi'
+import { useState } from 'react'
 
 import Logo from '../../assets/images/LOGO.png';
 import insta from '../../assets/images/insta.png';
@@ -9,7 +11,32 @@ import face from '../../assets/images/face.png';
 import loc from '../../assets/images/local.png';
 
 
-export default function index() {
+export default function Index() {
+    const [cliente, setCliente] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [reserva, setReserva] = useState('');
+    const [pessoas, setPessoas] = useState(0);
+    const [erro, setErro] = useState('');
+
+
+
+
+
+
+
+
+
+    async function criarReserva() {
+        try {
+            const a = await novaClickCliente(cliente, telefone, reserva, pessoas);
+
+            alert("Reserva criada com sucesso! Para cancela-lá entre em contato pelas redes socias do Oliver's")
+        } catch (err) {
+            if(err.response.status === 400){
+                alert('Insira todos os campos')
+            }
+        }
+    }
 
     return (
         <main className='bodyr'>
@@ -26,16 +53,13 @@ export default function index() {
                 <hr/>
             </div>
             
-            <h5>Data e Horário da reserva:</h5>
+            <h5>Data e Hora da reserva:</h5>
             <div className="d">
-                <input type="date" className="input1"/>
-                <input type="time" className="input1"/>
+                <input type="datetime-local" className="input1" value={reserva} onChange={e => setReserva(e.target.value)}/>
             </div>
             <h5>Quantas pessoas?</h5>
             <div className="t">
-                <button className="button">-</button>
-                <p className="p1">1</p>
-                <button className="button1">+</button>
+                <input type="number" defaultValue={1} className="input3" value={pessoas} onChange={e => setPessoas(e.target.value)}/>
             </div>
         </section>
         <section className="r2">
@@ -46,13 +70,13 @@ export default function index() {
             
             <div className="nome">
             <p className="p2">Nome:</p>
-            <input type="text" className="input2"/>
+            <input type="text" className="input2" value={cliente} onChange={e => setCliente(e.target.value)}/>
             </div>
             <div className="tel">
                 <p className="p2">Número de contato:</p>
-                <input type="tel" className="input2"/>
+                <input type="tel" className="input2" onChange={e => setTelefone(e.target.value)}/>
             </div>
-            <buttom href="#" className="y">Enviar pedido</buttom>
+            <button href="#" className="y" onClick={criarReserva}>Enviar Reserva</button>
         </section>
 
     </section>

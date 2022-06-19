@@ -66,3 +66,12 @@ export async function consultarReservaID(id) {
     const [linhas] = await con.query(comando, [id]);
     return linhas[0];
 }
+
+export async function resgistrarNovaCliente(reserva) {
+    const comando = `insert INTO TB_RESERVA (NM_CLIENTE, DS_TELEFONE, DT_RESERVA, NR_PESSOAS, ds_status)
+    values(?, ?, ?, ?, 'Pendente');`
+
+    const [resposta] = await con.query(comando, [reserva.cliente, reserva.telefone, reserva.reserva, reserva.pessoas, reserva.status]);
+    reserva.id = resposta.insertId;
+    return reserva
+}

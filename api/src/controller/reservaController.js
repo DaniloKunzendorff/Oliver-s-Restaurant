@@ -115,7 +115,26 @@ server.get('/reserva/consultar/:id', async (req, resp) => {
 })
 
 
+server.post('/reserva/nova/cliente', async (req,resp) => {
+    try{
+        const resgistrar = req.body;
+        if(!resgistrar.cliente) throw new Error ("Nome do cliente é OBRIGATÓRIO!")
+        if(!resgistrar.telefone) throw new Error ("Telefone é OBRIGATÓRIO!")
+        if(!resgistrar.reserva) throw new Error ("Data da reserva é OBRIGATÓRIA!")
+        if(!resgistrar.pessoas) throw new Error ("QTD. de pessoas é OBRIGATÓRIO!")
+        
 
+
+        const RESPOSTA = await resgistrarNova (resgistrar)
+        resp.status(200).send({RESPOSTA})
+
+    }
+    catch (err) {
+        resp.status(400).send({
+            Erro: err.message
+        })
+    }
+})
 
 
 

@@ -24,7 +24,7 @@ export default function Index() {
     }
 
     async function alterarReserva(id) {
-        navigate(`/alterar/${id}`)
+        navigate(`/alterarReserva/${id}`)
     }
 
     async function cancelarReserva(id) {
@@ -78,7 +78,7 @@ export default function Index() {
                                     <td>{item.reserva.substr(11, 5)}</td>
                                     <td>{item.pessoas}</td>
                                     <td className='imgs'>
-                                        <button><img src={editar} alt="editar" className='editar'/></button>
+                                        <button><img src={editar} alt="editar" className='editar' onClick={() => alterarReserva(item.id)}/></button>
                                         <button onClick={carregarPendente}><img src={sim} alt="sim" className='sim' onClick={() => confirmarReserva(item.id)} /></button>
                                         <button onClick={carregarPendente}><img src={nao} alt="nao" className='nao' onClick={() => cancelarReserva(item.id)} /></button>
                                     </td>
