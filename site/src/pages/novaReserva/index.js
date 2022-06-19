@@ -1,21 +1,16 @@
 import './index.scss'
 import { useNavigate } from 'react-router-dom';
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 import { novaClick } from '../../api/reservaApi'
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useParams } from 'react-router-dom';
 import storage from 'local-storage';
 
 export default function Index() {
-    const [nome, setNome] = useState('');
-    const [tel, setTel] = useState('');
-    const [data, setData] = useState('');
-    const [hora, setHora] = useState('');
+    const [cliente, setCliente] = useState('');
+    const [telefone, setTelefone] = useState('');
+    const [reserva, setReserva] = useState('');
     const [pessoas, setPessoas] = useState(0);
-
     
-    const {idParam} = useParams();
 
     const navigate = useNavigate();
 
@@ -28,11 +23,10 @@ export default function Index() {
     async function criarReserva() {
         try {
             const funcionario = storage('funcionario-logado').id;
-            const a = await novaClick(nome, tel, data, hora, pessoas, funcionario);
+            const a = await novaClick(funcionario, cliente, telefone, reserva, pessoas);
 
-            toast.dark('Reserva criada com sucesso!')
+            alert('Reserva criada com sucesso!')
         } catch (err) {
-           
             alert(err.message)
         }
     }
@@ -46,57 +40,54 @@ export default function Index() {
             </header>
             <section className="fundo">
                 <section className="preto">
-                    <h2>Reserva 11</h2>
+                    <h2>Reserva 21</h2>
                     <div>
                         <p>Nome do cliente:</p>
-                        <input type="text" value={nome} onChange={e => setNome(e.target.value)}/>
+                        <input type="text" value={cliente} onChange={e => setCliente(e.target.value)}/>
                     </div>
                     <div>
                         <p>Número de contato:</p>
-                        <input type="tel" value={tel} onChange={e => setTel(e.target.value)}/>
+                        <input type="text" value={telefone} onChange={e => setTelefone(e.target.value)}/>
                     </div>
                     <div>
-                        <p>Data:</p>
-                        <input type="date" value={data} onChange={e => setData(e.target.value)}/>
+                        <p>Data e Hora:</p>
+                        <input type="datetime-local" value={reserva} onChange={e => setReserva(e.target.value)}/>
                     </div>
-                    <div>
-                        <p>Hora:</p>
-                        <input type="time" value={hora} onChange={e => setHora(e.target.value)}/>
-                    </div>
+                   
                     <div>
                         <p>Pessoas a comparecer:</p>
-                        <select id="pessoas" value={pessoas} onChange={e => setPessoas(e.target.value)}>
-                                        <option selected disabled>Selecione</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                        <option>7</option>
-                                        <option>8</option>
-                                        <option>9</option>
-                                        <option>10</option>
-                                        <option>11</option>
-                                        <option>12</option>
-                                        <option>13</option>
-                                        <option>14</option>
-                                        <option>15</option>
-                                        <option>16</option>
-                                        <option>17</option>
-                                        <option>18</option>
-                                        <option>19</option>
-                                        <option>20</option>
-                                        <option>21</option>
-                                        <option>22</option>
-                                        <option>23</option>
-                                        <option>24</option>
-                                        <option>25</option>
-                                        <option>26</option>
-                                        <option>27</option>
-                                        <option>28</option>
-                                        <option>29</option>
-                                        <option>30</option>
+                        <select type="selection" value={pessoas} onChange={e => setPessoas(e.target.value)}>
+                            <option>Selecione</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
 
                         </select>
                     </div>

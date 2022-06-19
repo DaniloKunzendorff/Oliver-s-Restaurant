@@ -9,7 +9,7 @@ server.post('/reserva/nova', async (req,resp) => {
         if(!resgistrar.id) throw new Error ("Id do funcionario é OBRIGATÓRIO!")
         if(!resgistrar.cliente) throw new Error ("Nome do cliente é OBRIGATÓRIO!")
         if(!resgistrar.telefone) throw new Error ("Telefone é OBRIGATÓRIO!")
-        if(!resgistrar.data) throw new Error ("Data da reserva é OBRIGATÓRIA!")
+        if(!resgistrar.reserva) throw new Error ("Data da reserva é OBRIGATÓRIA!")
         if(!resgistrar.pessoas) throw new Error ("QTD. de pessoas é OBRIGATÓRIO!")
         
 

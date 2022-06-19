@@ -1,7 +1,7 @@
 import './index.scss';
 import Logo from '../../assets/images/LOGO.png';
 import { useEffect, useState } from 'react'
-import { listaPedentes } from '../../api/reservaApi';
+import { listaPedentes, porID, editarReserva, removerReserva } from '../../api/reservaApi';
 import sim from '../../assets/images/sim.png'
 import nao from '../../assets/images/nao.png'
 import editar from '../../assets/images/editar.png'
@@ -18,9 +18,14 @@ export default function Index() {
         }
     })
 
+    async function cancelarReserva(status) {
+        
+        const resp = removerReserva(status);
+        console.log(resp)
+    }
+
     async function carregarPendente() {
         const resp = await listaPedentes();
-        console.log(resp)
         setReserva(resp);
     }
 
@@ -67,7 +72,7 @@ export default function Index() {
                                     <td className='imgs'>
                                         <button><img src={editar} alt="editar" className='editar' /></button>
                                         <button><img src={sim} alt="sim" className='sim' /></button>
-                                        <button><img src={nao} alt="nao" className='nao' /></button>
+                                        <button onClick={cancelarReserva}><img src={nao} alt="nao" className='nao' /></button>
                                     </td>
                                 </tr>
                             )}

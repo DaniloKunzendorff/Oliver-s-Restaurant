@@ -3,15 +3,14 @@ const api = axios.create({
     baseURL: 'http://localhost:5000'
 })
 
-export async function novaClick(funcionario ,nome, tel, data, hora, pessoas) {
+export async function novaClick(funcionario ,cliente, telefone, reserva, pessoas) {
 
 
     const resposta = await api.post('/reserva/nova', {
         funcionario : funcionario,
-        cliente : nome,
-        telefone : tel,
-        reserva : data, 
-        reserva : hora,
+        cliente : cliente,
+        telefone : telefone,
+        reserva : reserva, 
         pessoas : pessoas
     })
     return resposta.data;
@@ -27,14 +26,19 @@ export async function porID(id) {
     return resposta.data;
 }
 
-export async function editarReserva(nome, tel, data, hora, pessoas) {
-    const resposta = await api.put('/reserva/alterar', {
-        cliente : nome,
-        telefone : tel,
-        reserva : data, 
-        reserva : hora,
+export async function editarReserva(id,cliente, telefone, reserva, pessoas) {
+    const resposta = await api.put(`/reserva/alterar/${id}`, {
+        cliente : cliente,
+        telefone : telefone,
+        reserva : reserva, 
         pessoas : pessoas
     })
     return resposta.data;
 }
 
+export async function removerReserva(id, status) {
+    const resposta = await api.put(`/reserva/remover/${id}`, {
+        status : status
+    })
+    return resposta.data;
+}

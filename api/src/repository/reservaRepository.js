@@ -4,7 +4,7 @@ export async function resgistrarNova(reserva) {
     const comando = `insert INTO TB_RESERVA (ID_FUNCIONARIO,NM_CLIENTE, DS_TELEFONE, DT_RESERVA, NR_PESSOAS, ds_status)
     values(?, ?, ?, ?, ?, 'Pendente');`
 
-    const [resposta] = await con.query(comando, [reserva.funcionario, reserva.cliente, reserva.telefone, reserva.data, reserva.pessoas, reserva.status]);
+    const [resposta] = await con.query(comando, [reserva.funcionario, reserva.cliente, reserva.telefone, reserva.reserva, reserva.pessoas, reserva.status]);
     reserva.id = resposta.insertId;
     return reserva
 }
