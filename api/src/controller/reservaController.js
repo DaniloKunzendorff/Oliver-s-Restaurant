@@ -7,8 +7,8 @@ server.post('/reserva/nova', async (req,resp) => {
     try{
         const resgistrar = req.body;
         if(!resgistrar.funcionario) throw new Error ("Id do funcionario é OBRIGATÓRIO!")
-        if(!resgistrar.cliente) throw new Error ("Nome do cliente é OBRIGATÓRIO!")
-        if(!resgistrar.telefone) throw new Error ("Telefone é OBRIGATÓRIO!")
+        if(!resgistrar.cliente.trim()) throw new Error ("Nome do cliente é OBRIGATÓRIO!")
+        if(!resgistrar.telefone) throw new Error ("Número contato é OBRIGATÓRIO!")
         if(!resgistrar.reserva) throw new Error ("Data da reserva é OBRIGATÓRIA!")
         if(!resgistrar.pessoas) throw new Error ("QTD. de pessoas é OBRIGATÓRIO!")
         
@@ -118,7 +118,7 @@ server.get('/reserva/consultar/:id', async (req, resp) => {
 server.post('/reserva/nova/cliente', async (req,resp) => {
     try{
         const resgistrar = req.body;
-        if(!resgistrar.cliente) throw new Error ("Nome do cliente é OBRIGATÓRIO!")
+        if(!resgistrar.cliente.trim()) throw new Error ("Nome do cliente é OBRIGATÓRIO!")
         if(!resgistrar.telefone) throw new Error ("Telefone é OBRIGATÓRIO!")
         if(!resgistrar.reserva) throw new Error ("Data da reserva é OBRIGATÓRIA!")
         if(!resgistrar.pessoas) throw new Error ("QTD. de pessoas é OBRIGATÓRIO!")

@@ -4,6 +4,9 @@ import { useEffect, useState } from 'react'
 import { editarReserva, novaClick, porID} from '../../api/reservaApi'
 import storage from 'local-storage';
 
+import { toast, ToastContainer  } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 export default function Index() {
     const [cliente, setCliente] = useState('');
     const [telefone, setTelefone] = useState('');
@@ -42,7 +45,7 @@ export default function Index() {
         try {
             const a = await editarReserva(id, cliente, telefone, reserva, pessoas);
 
-            alert('Reserva alterada com sucesso!')
+            toast.dark('Reserva alterada com sucesso!')
         } catch (err) {
             if(err.response.status === 400){
                 setErro(err.response.data.erro)
@@ -52,14 +55,18 @@ export default function Index() {
   
 
     async function criarReserva() {
-        try {
-            const funcionario = storage('funcionario-logado').id;
-            const a = await novaClick(funcionario, cliente, telefone, reserva, pessoas);
+        if (id > 0)
+            alterarReserva();
+        else {
+            try {
+                const funcionario = storage('funcionario-logado').id;
+                const a = await novaClick(funcionario, cliente, telefone, reserva, pessoas);
 
-            alert('Reserva criada com sucesso!')
-        } catch (err) {
-            if(err.response.status === 400){
-                setErro(err.response.data.Erro)
+                toast.dark('Reserva criada com sucesso!')
+            } catch (err) {
+                if(err.response.status === 400){
+                    setErro(err.response.data.Erro)
+                }
             }
         }
     }
@@ -68,6 +75,7 @@ export default function Index() {
     return (
         
         <main className="bodyn">
+            
             <header className="j">
                 <h4>NOVA RESERVA</h4>
             </header>
@@ -80,7 +88,7 @@ export default function Index() {
                     </div>
                     <div>
                         <p>Número de contato:</p>
-                        <input type="text" value={telefone} onChange={e => setTelefone(e.target.value)}/>
+                        <input type="number-tel" value={telefone} onChange={e => setTelefone(e.target.value)}/>
                     </div>
                     <div>
                         <p>Data e Hora:</p>
@@ -125,8 +133,8 @@ export default function Index() {
                         </select>
                     </div>
                     <div className='criar'>
-                        <button href="#" className="t" onClick={alterarReserva}>Alterar Reserva</button>
-                        <button href="#" className="t" onClick={criarReserva}>Criar Reserva</button>
+                        {/* <button href="#" className="t" onClick={alterarReserva}>Alterar Reserva</button> */}
+                        <button href="#" className="t" onClick={criarReserva}>{id > 0 ? 'Alterar ' : 'Criar '} Reserva</button>
                     </div>
                     <div className='erro'>
                         {erro}
@@ -136,6 +144,8 @@ export default function Index() {
             <div className='c'>
                 <a href="../listaReserva" className='can'>Cancelar</a>
             </div>
+
+            <ToastContainer />
         </main>
     )
 

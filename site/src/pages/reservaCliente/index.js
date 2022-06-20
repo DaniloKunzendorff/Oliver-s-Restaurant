@@ -59,7 +59,7 @@ export default function Index() {
             </div>
             <h5>Quantas pessoas?</h5>
             <div className="t">
-                <input type="number" defaultValue={1} className="input3" value={pessoas} onChange={e => setPessoas(e.target.value)}/>
+                <input type="number" defaultValue={1} className="input3" max={30} min={1} value={pessoas} onChange={e => setPessoas(e.target.value)}/>
             </div>
         </section>
         <section className="r2">
@@ -74,9 +74,9 @@ export default function Index() {
             </div>
             <div className="tel">
                 <p className="p2">Número de contato:</p>
-                <input type="tel" className="input2" onChange={e => setTelefone(e.target.value)}/>
+                <input type="number"  className="input2" onChange={e => setTelefone(e.target.value)}/>
             </div>
-            <button href="#" className="y" onClick={criarReserva}>Enviar Reserva</button>
+            <button href="#"  className="y" onClick={criarReserva}>Enviar Reserva</button>
         </section>
 
     </section>

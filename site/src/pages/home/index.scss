@@ -423,6 +423,7 @@
     }
     
     .co{
+        transition: .3s;
         background-color:  #C6781E;
         height: 25rem;
         width: 22rem;
@@ -435,8 +436,7 @@
     
     .co:hover{
         background-color:  #C6781E;
-        height: 27.5rem;
-        width: 23rem;
+        transform: scale(1.05);
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
@@ -682,9 +682,9 @@
         background-color: #010915;
         border: none;
         font-family: 'f1';
-        height: 2.5rem;
+        
         border-radius: 7px;
-        width: 8.3rem;
+        transform: scale(1.05);
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -713,8 +713,7 @@
     
     .log-21:hover{
         display: flex;
-        width: 38.5rem;
-        height: 14.5rem;
+        transform: scale(1.05);
         flex-direction: column;
         background-size: 100%;
         background-image: url('../../assets/images/Opera\ Instantâneo_2022-05-13_081642_www.google.com.png');
@@ -1106,8 +1105,7 @@
     
     .co:hover{
         background-color:  #C6781E;
-        height: 27.5rem;
-        width: 23rem;
+        transform: scale(1.05);
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
@@ -1381,16 +1379,14 @@
     
     .log-21:hover{
         display: flex;
-        width: 38.5rem;
-        height: 14.5rem;
+        transform: scale(1.05);
         flex-direction: column;
         background-size: 100%;
         background-image: url('../../assets/images/Opera\ Instantâneo_2022-05-13_081642_www.google.com.png');
     }
  
     .log-23{
-        width: 40rem;
-        height: 18rem;
+        transform: scale(1.05);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1773,8 +1769,7 @@
     
     .co:hover{
         background-color:  #C6781E;
-        height: 26.5rem;
-        width: 20rem;
+        transform: scale(1.05);
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
@@ -2444,8 +2439,7 @@
     
     .co:hover{
         background-color:  #C6781E;
-        height: 27rem;
-        width: 26rem;
+        transform: scale(1.05);
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
@@ -2740,8 +2734,7 @@
 
 }
 
-@media(max-width:480px)
-{
+    @media(max-width:480px){
     body{
         width: 480px;
     }
@@ -3113,8 +3106,7 @@
     
     .co{
         background-color:  #C6781E;
-        height: 45vh;
-        width: 60vw;
+        transform: scale(1.05);
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
@@ -3124,8 +3116,7 @@
 
     .co:hover{
         background-color:  #C6781E;
-        height: 46.5vh;
-        width: 61.5vw;
+        transform: scale(1.05);
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
