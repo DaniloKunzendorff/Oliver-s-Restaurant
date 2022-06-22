@@ -3,7 +3,7 @@ import Logo from '../../assets/images/LOGO.png';
 import { login } from '../../api/funcionarioApi.js';
 import storage from 'local-storage';
 import { useNavigate } from 'react-router-dom';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import LoadingBar from 'react-top-loading-bar'
 
 export default function Index() {
@@ -15,6 +15,13 @@ export default function Index() {
 
     const navigate = useNavigate();
     const ref = useRef();
+
+    useEffect(() => {
+        if(storage('funcionario-logado')) {
+            navigate('/tabelaADM')
+        }
+    })
+
 
     async function loginClick() {
 

@@ -26,7 +26,7 @@ export default function index() {
 
                 <div className='menu-tex'>
                     <li className='li1'>
-                        <a className='lin-1'  href='#inicio'>Início</a >
+                        <a className='lin-1'  href='#inicio'>Inicio</a >
                     </li>
                     <li className='li1'>
                         <a href="#eventos" className='lin-1'>Eventos</a>

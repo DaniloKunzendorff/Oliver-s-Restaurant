@@ -44,7 +44,7 @@ export default function Index() {
     return (
         <main className="bodylista">
             <header>
-                <div className="t">a
+                <div className="t">
                     <a href="../tabelaADM" className="voltar">Voltar</a>
                     <img src={Logo} className="img"/>
                 </div>
